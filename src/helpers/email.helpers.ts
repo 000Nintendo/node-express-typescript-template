@@ -26,36 +26,6 @@ interface ISendMail {
   to: string
 }
 
-// const mailTransport = nodemailer.createTransport({
-//   host: 'smtpout.secureserver.net',
-//   secure: true,
-//   secureConnection: false, // TLS requires secureConnection to be false
-//   tls: {
-//     ciphers: 'SSLv3',
-//   },
-//   requireTLS: true,
-//   port: 465,
-//   debug: true,
-//   auth: {
-//     user: 'no-reply@mylo.global',
-//     pass: 'meganalphamegan9',
-//   },
-// })
-
-/**
- * Send email using gmail
- */
-// const mailTransport = nodemailer.createTransport({
-//   service: 'gmail',
-//   host: 'smtp.gmail.com',
-//   port: 587,
-//   secure: true,
-//   auth: {
-//     user: process.env.AUTH_USER,
-//     pass: process.env.AUTH_PASS,
-//   },
-// })
-
 const mailTransport = nodemailer.createTransport({
   // service: 'gmail',
   host: process.env.EMAIL_HOST,
